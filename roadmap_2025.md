@@ -11,17 +11,17 @@
 
 #### Python (easy to medium)
 
-1. Python - Syntax -> Manish Kumar, Telusko, Code with Harry (choose one and stick to it)
+1. **Python** - Syntax -> Manish Kumar, Telusko, Code with Harry (choose one and stick to it)
 
-2. Top 50 python questions -> `https://www.geeksforgeeks.org/50-python-interview-questions-for-data-science/`
+2. **Top 50 python questions** -> `https://www.geeksforgeeks.org/50-python-interview-questions-for-data-science/`
 
-3. Basics of OOP
+3. **Basics of OOP**
 
    - For experience > 5 years
      - OOPs + Design Patterns
        - decorator, factory, facade, singleton, strategy, UML
 
-4. Coding questions - arrays , strings
+4. **Coding questions** - arrays , strings
 
    - For experience > 5 years
      - arrays, string
@@ -31,7 +31,7 @@
      - recursion
      - DP, graph (good to have)
 
-5. Hackerrank -> gfg -> leetcode (applies to exp > 5 yrs also)
+5. `Hackerrank` -> `gfg` -> `leetcode` (applies to exp > 5 yrs also)
 
 #### SQL (easy to hard)
 
