@@ -1,4 +1,4 @@
-1. Apache Spark is an `unified computing engine` for `parallel processing` on a `computing cluster`.
+1. Apache Spark is an `unified computing engine` and `a set of libraries` for `parallel processing` on a `computing cluster`.
 
 2. Unified - It is a common platform where all types of data professionals can collaborate i.e., data analyst, data engineer, data scientist
 
