@@ -1,4 +1,6 @@
-**Role - Senior Data Engineer**
+Role - Senior Data ENgineer
+Org - Digivate Labs
+Date - 27/05/2025
 
 1. How to implement change data capture in a pipeline ?
 2. What is the difference between a normalized view and materialized view ?
