@@ -33,7 +33,7 @@ def computeTimeComponents(df, date_field):
 #     print(False)
 
 # LOC, ILOC, IX 
-hotel_df_1 = hotel_df.copy().head(10)
+hotel_df_1 = hotel_df.copy()
 # hotel_df_1 = hotel_df.drop(columns=['Date'], axis=1)
 hotel_df_1['Room number'] = hotel_df_1['Room number'].astype('int')
 # print(type(hotel_df_1.loc[0:22, 'Company':'Person Name']))
@@ -41,8 +41,9 @@ hotel_df_1['Room number'] = hotel_df_1['Room number'].astype('int')
 # print(hotel_df_1)
 # print(hotel_df.columns)
 # print(hotel_df_1.iloc[0:10, 0:3])
-print(hotel_df_1.iloc[:,:])
+# print(hotel_df_1.iloc[:,:])
 
+# print(hotel_df_1.loc[:, 'Company'].value_counts())
 
 # hotel_df.columns = hotel_df.columns.str.lower()
 # hote_df.columns = hotel_df.columns.apply(lambda x: x.lower())
