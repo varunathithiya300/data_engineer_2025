@@ -43,3 +43,38 @@ arr_4 = np.array([
         [21, 22, 23, 24]
     ]
 ])
+
+
+# Constructing a 3D array
+
+arr_3d = np.array([
+                    [[1, 2], [3, 4]], 
+                    [[4, 5], [6, 7]], 
+                    [[7, 8], [9, 10]]
+                ])
+
+print(f"Shape of arr_3d is {arr_3d.shape}")
+print(f"Number of dimensions in arr_3d is {arr_3d.ndim}")
+
+arr_3d_2 = np.array([
+    [
+        [1, 2, 3, 4],
+        [1, 2, 3, 4],
+        [1, 2, 3, 4]
+    ],
+    [
+        [5, 6, 7, 8],
+        [5, 6, 7, 8],
+        [5, 6, 7, 8]
+    ],
+    [
+        [5, 5, 5, 5],
+        [5, 5, 5, 5],
+        [5, 5, 5, 5]
+    ]
+])
+
+# 2x3x4
+# 3x3x4
+print(arr_3d_2.shape)
+print(arr_3d_2.ndim)
