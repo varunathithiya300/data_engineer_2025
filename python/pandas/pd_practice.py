@@ -6,6 +6,43 @@ hotel_df = pd.read_csv('D:\Varun Athithiya\DE_ROADMAP_2025\data_engineer_2025\py
                 parse_dates=True, 
                 infer_datetime_format=True,
                 float_precision="high")
+hotel_df = hotel_df.dropna()
+
+def splitTime (df, date_field, component):
+    df = df.dropna()
+    df[date_field] = pd.to_datetime(df[date_field])
+    dt_accessor = getattr(df[date_field].dt, component)
+    df[component] = dt_accessor() if callable(dt_accessor) else dt_accessor
+    return df
+
+def computeTimeComponents(df, date_field):
+    return(
+        df
+        .pipe(splitTime, date_field, 'year')
+        .pipe(splitTime, date_field, 'month')
+        .pipe(splitTime, date_field, 'day')
+        .pipe(splitTime, date_field, 'day_name')
+        .pipe(splitTime, date_field, 'month_name')
+    )
+# print(computeTimeComponents(hotel_df, 'Date'))
+
+# hotel_df = hotel_df.dropna()
+# if callable(pd.to_datetime(hotel_df['Date']).dt.year):
+#     print(True)
+# else:
+#     print(False)
+
+# LOC, ILOC, IX 
+hotel_df_1 = hotel_df.copy().head(10)
+# hotel_df_1 = hotel_df.drop(columns=['Date'], axis=1)
+hotel_df_1['Room number'] = hotel_df_1['Room number'].astype('int')
+# print(type(hotel_df_1.loc[0:22, 'Company':'Person Name']))
+# print(type(hotel_df_1['Company']))
+# print(hotel_df_1)
+# print(hotel_df.columns)
+# print(hotel_df_1.iloc[0:10, 0:3])
+print(hotel_df_1.iloc[:,:])
+
 
 # hotel_df.columns = hotel_df.columns.str.lower()
 # hote_df.columns = hotel_df.columns.apply(lambda x: x.lower())
@@ -35,30 +72,3 @@ hotel_df = pd.read_csv('D:\Varun Athithiya\DE_ROADMAP_2025\data_engineer_2025\py
 # print(type(hotel_df['date']))
 # print(type(hotel_df['first_name']))
 # print(hotel_df)
-
-def splitTime(df, date_field, component):
-    df = df.dropna()
-    df[date_field] = pd.to_datetime(df[date_field])
-    # df[component] = df[date_field].dt.component
-    dt_accessor = getattr(df[date_field].dt, component)
-    df[component] = dt_accessor() if callable(dt_accessor) else dt_accessor
-    return df
-
-def computeTimeComponents(df, date_field):
-    return(
-        df
-        .pipe(splitTime, date_field, 'year')
-        .pipe(splitTime, date_field, 'month')
-        .pipe(splitTime, date_field, 'day')
-        .pipe(splitTime, date_field, 'day_name')
-        .pipe(splitTime, date_field, 'month_name')
-    )
-
-print(computeTimeComponents(hotel_df, 'Date'))
-
-# hotel_df = hotel_df.dropna()
-# if callable(pd.to_datetime(hotel_df['Date']).dt.year):
-#     print(True)
-# else:
-#     print(False)
-
