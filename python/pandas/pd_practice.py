@@ -24,7 +24,14 @@ def computeTimeComponents(df, date_field):
         .pipe(splitTime, date_field, 'day_name')
         .pipe(splitTime, date_field, 'month_name')
     )
-# print(computeTimeComponents(hotel_df, 'Date'))
+
+df = computeTimeComponents(hotel_df, 'Date')
+
+df['min_room_number'] = df.groupby('Company')['Room number'].transform('min')
+df['max_room_number'] = df.groupby('Company')['Room number'].transform('max')
+
+print(df)
+
 
 # hotel_df = hotel_df.dropna()
 # if callable(pd.to_datetime(hotel_df['Date']).dt.year):

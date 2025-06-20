@@ -78,3 +78,10 @@ arr_3d_2 = np.array([
 # 3x3x4
 print(arr_3d_2.shape)
 print(arr_3d_2.ndim)
+
+arr5 = np.array([[1, 2], [3, 3]])
+print(arr5)
+arr5 = np.delete(arr5, obj=0, axis=1)
+new_insert = [5, 9]
+arr5 = np.insert(arr5, obj=0,values=new_insert, axis=1)
+print(arr5)
