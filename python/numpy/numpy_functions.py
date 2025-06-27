@@ -15,12 +15,16 @@ import numpy as np
 # | `np.random.randint()` | Random integers              | `np.random.randint(0, 10, (3, 3))` |
 
 a = np.array([1, 2, 3])
-b = np.zeros((2, 3))
+b = np.zeros((2, 3), dtype=int)
 c = np.ones((3,))
 d = np.full((2, 2), 7)
 e = np.array([[1, 2, 3, 4], [4, 5, 6, 7]])
 f = np.arange(start=2, stop=9, step=0.5, dtype=int)
-print(f)
+g = np.linspace(0, 1, 5)
+h = np.eye(3, 3)
+# i = np.random.rand(2,2, dtype=int)
+i = np.random.randint(0, 5)
+print(i)
 
 
 # ## 2. **Array Attributes**
