@@ -1,0 +1,83 @@
+{
+  "company": {
+    "name": "TechNova",
+    "location": {
+      "country": "USA",
+      "offices": [
+        {
+          "city": "San Francisco",
+          "address": {
+            "street": "Market St",
+            "building": "123A",
+            "coordinates": [37.7749, -122.4194]
+          },
+          "employees": [
+            {
+              "id": 101,
+              "name": "Alice Johnson",
+              "roles": ["Engineer", "Team Lead"],
+              "contact": {
+                "email": "alice@technova.com",
+                "phone": null
+              },
+              "projects": [
+                {
+                  "name": "NeuralMesh",
+                  "duration_months": 12,
+                  "tech_stack": {
+                    "frontend": ["React", "TypeScript"],
+                    "backend": {
+                      "languages": ["Python", "Go"],
+                      "frameworks": ["FastAPI", "gRPC"]
+                    }
+                  }
+                },
+                {
+                  "name": "QuantumCompute",
+                  "duration_months": 6,
+                  "tech_stack": null
+                }
+              ]
+            },
+            {
+              "id": 102,
+              "name": "Bob Smith",
+              "roles": ["Designer"],
+              "contact": {
+                "email": "bob@technova.com",
+                "phone": "555-1234"
+              },
+              "projects": []
+            }
+          ]
+        },
+        {
+          "city": "New York",
+          "address": {},
+          "employees": null
+        }
+      ]
+    },
+    "founded": 2010,
+    "departments": [
+      {
+        "name": "Engineering",
+        "budget": 1200000,
+        "head": "Alice Johnson"
+      },
+      {
+        "name": "Design",
+        "budget": 500000
+      }
+    ],
+    "certified": true,
+    "misc": {
+      "notes": "",
+      "ratings": [4.5, 4.7, 4.8],
+      "metadata": {
+        "created": "2023-01-15T10:00:00Z",
+        "updated": null
+      }
+    }
+  }
+}
