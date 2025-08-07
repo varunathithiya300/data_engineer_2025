@@ -1,5 +1,5 @@
 import numpy as np
-from typing import List, Union
+from typing import List
 
 """ 
 To generate an array of numericals using numpy
@@ -22,8 +22,10 @@ def bubbleSort(start: int, stop: int, num: int) -> List[float]:
     n = len(arr)
     for i in range(n):
         for j in range(n - i - 1):
-            if arr[j] > arr[j+1]:
+            if arr[j] < arr[j+1]:  # arr[j] > arr[j+1] -> Ascending
                 arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
     
 print(bubbleSort(4, 21, 5))
+
+
