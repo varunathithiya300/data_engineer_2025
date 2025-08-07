@@ -20,4 +20,19 @@ def merge(left, right):
     result.extend(right[j:])
     return result
 
-print(merge_sort([2, 5, 4, 6, 99, 0, 7]))
+print(merge_sort([2, 3, 1, 9, 7, 6]))
+
+
+""" 
+1)
+2546; 
+len=4, mid=2, left=(2,5 -> len=2, mid=1, left=2, right=5 -> merge(2,5) -> result=[2,5])
+len=4, mid=2, right=(4,6 -> len=2, mid=1, left=4, right=6 -> merge(4,6) -> result=[4,6])
+
+merge([2,5], [4,6])
+i=0, j=0
+2<4 -> result = [2], i=1 & j=0 -> 5 > 4 -> result = [2,4], i=1 & j=1, -> 5 < 6 -> result = [2, 4, 5] -> i=2, j=1
+
+result.extend(left[2:] = None)
+result.extend(right[2:] = 6) -> result = [2, 4, 5, 6]
+"""
