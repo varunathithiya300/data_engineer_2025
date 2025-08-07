@@ -1,8 +1,13 @@
 def bubbleSort(arr):
     for i in range(len(arr)):
+        swapped = False
         for j in range(len(arr) - i -1):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
-    return arr
+                swapped = True
+        if not swapped:
+            break
 
-print(bubbleSort([5, 13, 12, 20, -1, 0]))
+    return arr  
+
+print(bubbleSort([1, 2, 3, 4, 5]))
